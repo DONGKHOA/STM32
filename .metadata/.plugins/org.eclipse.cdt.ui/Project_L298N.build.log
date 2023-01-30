@@ -1,0 +1,10 @@
+21:38:10 **** Build of configuration Debug for project Project_L298N ****
+make -j8 all 
+arm-none-eabi-size   Project_L298N.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8112	     20	   1644	   9776	   2630	Project_L298N.elf
+Finished building: default.size.stdout
+ 
+
+21:38:11 Build Finished. 0 errors, 0 warnings. (took 308ms)
+

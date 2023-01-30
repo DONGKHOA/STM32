@@ -1,0 +1,5 @@
+../Core/Src/main.c:62:6:BUTTON_Handel	16	static
+../Core/Src/main.c:99:5:main	8	static
+../Core/Src/main.c:143:6:SystemClock_Config	72	static
+../Core/Src/main.c:180:13:MX_GPIO_Init	32	static
+../Core/Src/main.c:214:6:Error_Handler	4	static,ignoring_inline_asm

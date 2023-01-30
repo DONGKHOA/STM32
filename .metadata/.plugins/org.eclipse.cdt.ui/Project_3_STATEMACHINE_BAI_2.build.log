@@ -1,0 +1,16 @@
+21:38:07 **** Build of configuration Debug for project Project_3_STATEMACHINE_BAI_2 ****
+make -j8 all 
+arm-none-eabi-gcc -o "Project_3_STATEMACHINE_BAI_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\Project_3_STATEMACHINE_BAI_2\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Project_3_STATEMACHINE_BAI_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Project_3_STATEMACHINE_BAI_2.elf
+ 
+arm-none-eabi-size   Project_3_STATEMACHINE_BAI_2.elf 
+arm-none-eabi-objdump -h -S  Project_3_STATEMACHINE_BAI_2.elf  > "Project_3_STATEMACHINE_BAI_2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5468	     24	   1600	   7092	   1bb4	Project_3_STATEMACHINE_BAI_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: Project_3_STATEMACHINE_BAI_2.list
+ 
+
+21:38:08 Build Finished. 0 errors, 0 warnings. (took 731ms)
+

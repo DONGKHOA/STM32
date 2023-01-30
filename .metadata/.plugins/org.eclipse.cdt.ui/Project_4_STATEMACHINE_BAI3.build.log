@@ -1,0 +1,10 @@
+21:38:08 **** Build of configuration Debug for project Project_4_STATEMACHINE_BAI3 ****
+make -j8 all 
+arm-none-eabi-size   Project_4_STATEMACHINE_BAI3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13916	    124	   1788	  15828	   3dd4	Project_4_STATEMACHINE_BAI3.elf
+Finished building: default.size.stdout
+ 
+
+21:38:09 Build Finished. 0 errors, 0 warnings. (took 386ms)
+
