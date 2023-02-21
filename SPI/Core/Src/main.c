@@ -49,7 +49,7 @@ uint8_t deboucing_state = 1;
 uint8_t is_deboucing = 0;
 uint32_t deboucing_timer = 0;
 
-uint8_t txBuffer = 1;
+uint8_t txBuffer = 0;
 uint8_t condition_tx = 0;
 uint8_t rxBuffer;
 uint8_t SPI_buf;
@@ -68,12 +68,11 @@ static void MX_SPI2_Init(void);
 /* USER CODE BEGIN 0 */
 void TX_SPI()
 {
-	if(condition_tx)
-	{
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
-		HAL_SPI_Transmit(&hspi1, &txBuffer, 1, 100);
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
-	}
+
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, &txBuffer, 1, 100);
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+
 }
 void BUTTON_Handle()
 {
@@ -87,7 +86,7 @@ void BUTTON_Handle()
 	}
 
 	//debouncing
-	if(is_deboucing == 1 && (HAL_GetTick() - deboucing_timer ) > 15)
+	if(is_deboucing == 1 && (HAL_GetTick() - deboucing_timer ) >= 15)
 	{
 		current_state = deboucing_state;
 		is_deboucing = 0;
@@ -98,14 +97,10 @@ void BUTTON_Handle()
 		if(current_state == 0)
 		{
 			txBuffer = 1;
-			condition_tx = 1;
-//			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
 		}
 		else
 		{
 			txBuffer = 0;
-			condition_tx = 0;
-
 		}
 		last_state = current_state;
 	}
@@ -139,7 +134,6 @@ void LED_Handle()
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	HAL_SPI_Receive_IT(&hspi2, &rxBuffer, 1);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -147,7 +141,7 @@ int main(void)
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
-  /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init *
 
   /* USER CODE END Init */
 
@@ -163,6 +157,8 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+	HAL_SPI_Receive_IT(&hspi2, &rxBuffer, 1);
+//	HAL_SPI_Transmit(&hspi1, &txBuffer, 1, 100);
 
   /* USER CODE END 2 */
 
@@ -380,3 +376,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
