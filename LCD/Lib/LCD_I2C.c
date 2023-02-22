@@ -5,7 +5,7 @@ void LCD_Send_cmd(LCD_I2C_HandleTypeDef *p_LCD, char p_cmd)
 	char p_data_H, p_data_L;
 	uint8_t p_data[4];
 	p_data_H = (p_cmd & 0xF0);
-	p_data_L = ((p_cmd<<4) & 0xF0);
+	p_data_L = ((p_cmd << 4) & 0xF0);
 
 	p_data[0] = p_data_H | p_LCD->LCD_Backlight_val | En;
 	p_data[1] = p_data_H | p_LCD->LCD_Backlight_val;
@@ -19,7 +19,7 @@ void LCD_Send_data(LCD_I2C_HandleTypeDef *p_LCD, char p_data)
 	char p_data_H, p_data_L;
 	uint8_t p_data_Buf[4];
 	p_data_H = (p_data & 0xF0);
-	p_data_L = ((p_data<<4) & 0xF0);
+	p_data_L = ((p_data << 4) & 0xF0);
 
 	p_data_Buf[0] = p_data_H | p_LCD->LCD_Backlight_val | En | Rs;
 	p_data_Buf[1] = p_data_H | p_LCD->LCD_Backlight_val | Rs;
@@ -30,21 +30,17 @@ void LCD_Send_data(LCD_I2C_HandleTypeDef *p_LCD, char p_data)
 }
 void LCD_Set_Cursor(LCD_I2C_HandleTypeDef *p_LCD, uint8_t p_col, uint8_t p_row)
 {
-	p_col = p_LCD->LCD_Columns;
-	p_row = p_LCD->LCD_Rows;
 
 	switch(p_row)
 	{
 	case 0:
-		p_col |= LCD_CURSORLLINE1_1;
+		p_col |= 0x80;
 		break;
 	case 1:
-		p_col |= LCD_CURSORLLINE2_1;
+		p_col |= 0xc0;
 		break;
 	}
-	p_LCD->LCD_Columns = p_col;
-	p_LCD->LCD_Rows = p_row;
-	LCD_Send_cmd(p_LCD, p_LCD->LCD_Columns);
+	LCD_Send_cmd(p_LCD, p_col);
 }
 void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8_t p_col, uint8_t p_row, uint8_t p_Slave_Address)
 {
@@ -68,13 +64,14 @@ void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8
 	HAL_Delay(10);
 
 	 //display initialization
-	LCD_Send_cmd(p_LCD, LCD_FUNCTIONSET); // Function set --> DL=0 (4 bit mode), N = 1 (2 line display) F = 0 (5x8 characters)
+	LCD_Send_cmd(p_LCD, 0x28); // Function set --> DL=0 (4 bit mode), N = 1 (2 line display) F = 0 (5x8 characters)
 	HAL_Delay(1);
-	LCD_Send_cmd(p_LCD, LCD_DISPLAYCONTROL ); //Display on/off control --> D=0,C=0, B=0  ---> display off		HAL_Delay(1);
-	LCD_Send_cmd(p_LCD, LCD_CLEARDISPLAY);  // clear display
+	LCD_Send_cmd(p_LCD, 0x08); //Display on/off control --> D=0,C=0, B=0  ---> display off		HAL_Delay(1);
+	HAL_Delay(1);
+	LCD_Send_cmd(p_LCD, 0x01);  // clear display
 	HAL_Delay(1);
 	HAL_Delay(1);
-	LCD_Send_cmd(p_LCD, LCD_ENTRYMODESET); //Entry mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
+	LCD_Send_cmd(p_LCD, 0x06); //Entry mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
 	HAL_Delay(1);
 	LCD_Send_cmd(p_LCD, LCD_DISPLAYCONTROL | p_LCD->LCD_Display_Option); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
 
@@ -87,6 +84,6 @@ void LCD_Send_String (LCD_I2C_HandleTypeDef *p_LCD, char *str)
 void LCD_Set_Clear(LCD_I2C_HandleTypeDef *p_LCD)
 {
 	LCD_Send_cmd(p_LCD, LCD_CLEARDISPLAY);
-	HAL_Delay(10);
+	HAL_Delay(2);
 	LCD_Set_Cursor(p_LCD, 0, 0);
 }
