@@ -487,3 +487,928 @@ Finished building: default.size.stdout
  
 Finished building: LCD.list
  
+22:21:13 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8808	     20	   1668	  10496	   2900	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:23:13 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8816	     20	   1668	  10504	   2908	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:26:17 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8616	     20	   1668	  10304	   2840	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:27:31 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8616	     20	   1668	  10304	   2840	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:28:49 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8616	     20	   1668	  10304	   2840	LCD.elf
+Finished building: default.size.stdout
+ 
+22:37:00 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8636	     20	   1668	  10324	   2854	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:39:51 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8636	     20	   1668	  10324	   2854	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:48:22 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Lib/LCD_I2C.c: In function 'LCD_Set_Cursor':
+../Lib/LCD_I2C.c:34:5: error: 'row' undeclared (first use in this function); did you mean 'p_row'?
+   34 |  if(row == 1)
+      |     ^~~
+      |     p_row
+../Lib/LCD_I2C.c:34:5: note: each undeclared identifier is reported only once for each function it appears in
+../Lib/LCD_I2C.c:36:31: error: 'col' undeclared (first use in this function); did you mean 'p_col'?
+   36 |   pos_Addr = 0x80 + row - 1 + col;
+      |                               ^~~
+      |                               p_col
+make: *** [Lib/subdir.mk:19: Lib/LCD_I2C.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:48:51 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8760	     20	   1668	  10448	   28d0	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:50:53 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+22:51:34 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+22:52:08 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+22:53:00 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+22:54:03 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+22:54:41 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1668	  10476	   28ec	LCD.elf
+Finished building: default.size.stdout
+ 
+23:11:17 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:11:55 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:14:36 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:18:01 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:18:24 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+23:21:40 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:22:09 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+23:22:47 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8752	     20	   1668	  10440	   28c8	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:23:36 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:27:02 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:31:56 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+23:34:47 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:35:07 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+23:36:56 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:37:45 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8580	     20	   1668	  10268	   281c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:38:44 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:39:03 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+23:39:33 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:39:54 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+23:40:21 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:40:44 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:41:05 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8576	     20	   1668	  10264	   2818	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:41:33 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8568	     20	   1668	  10256	   2810	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:42:05 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8568	     20	   1668	  10256	   2810	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:42:33 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8568	     20	   1668	  10256	   2810	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:43:06 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8736	     20	   1668	  10424	   28b8	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:49:15 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8748	     20	   1668	  10436	   28c4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:49:50 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8736	     20	   1668	  10424	   28b8	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:52:17 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8760	     20	   1668	  10448	   28d0	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+23:52:51 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8760	     20	   1668	  10448	   28d0	LCD.elf
+Finished building: default.size.stdout
+ 
+00:00:13 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8804	     20	   1668	  10492	   28fc	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:04:44 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8804	     20	   1668	  10492	   28fc	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:06:49 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8800	     20	   1668	  10488	   28f8	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:10:37 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8812	     20	   1668	  10500	   2904	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:11:07 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8812	     20	   1668	  10500	   2904	LCD.elf
+Finished building: default.size.stdout
+ 
+00:17:56 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:21:03 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+00:42:19 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:42:56 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+00:43:38 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+00:44:36 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+00:45:20 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:69:8: error: expected ';' before 'int'
+   69 |   */ á
+      |       ^
+      |       ;
+   70 | int main(void)
+      | ~~~    
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:45:34 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8836	     20	   1676	  10532	   2924	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:48:41 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8624	     20	   1676	  10320	   2850	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:49:18 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8624	     20	   1676	  10320	   2850	LCD.elf
+Finished building: default.size.stdout
+ 
+00:49:56 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8624	     20	   1676	  10320	   2850	LCD.elf
+Finished building: default.size.stdout
+ 
+00:51:55 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8624	     20	   1676	  10320	   2850	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+00:52:43 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8624	     20	   1676	  10320	   2850	LCD.elf
+Finished building: default.size.stdout
+ 
+00:59:32 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8628	     20	   1676	  10324	   2854	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:02:01 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1676	  10328	   2858	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:03:19 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1676	  10328	   2858	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:03:45 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1676	  10328	   2858	LCD.elf
+Finished building: default.size.stdout
+ 
+01:04:14 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1676	  10328	   2858	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:04:35 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1676	  10328	   2858	LCD.elf
+Finished building: default.size.stdout
+ 
+01:08:46 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:09:11 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+01:10:40 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8672	     20	   1668	  10360	   2878	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:11:50 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8672	     20	   1668	  10360	   2878	LCD.elf
+Finished building: default.size.stdout
+ 
+01:12:20 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8764	     20	   1668	  10452	   28d4	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:12:57 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:16:13 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:16:28 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+01:19:12 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/LCD_I2C.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD/Lib" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/LCD_I2C.d" -MT"Lib/LCD_I2C.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/LCD_I2C.o"
+arm-none-eabi-gcc -o "LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD.elf
+ 
+arm-none-eabi-size   LCD.elf 
+arm-none-eabi-objdump -h -S  LCD.elf  > "LCD.list"
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD.list
+ 
+01:19:55 **** Incremental Build of configuration Debug for project LCD ****
+make -j8 all 
+arm-none-eabi-size   LCD.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1668	  10284	   282c	LCD.elf
+Finished building: default.size.stdout
+ 

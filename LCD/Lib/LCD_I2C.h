@@ -41,6 +41,9 @@ typedef struct
 	uint8_t LCD_Display_Option;
 } LCD_I2C_HandleTypeDef;
 
+extern uint8_t p_data[4];
+extern char p_data_H, p_data_L;
+
 // initialization LCD
 void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8_t p_col, uint8_t p_row, uint8_t p_Slave_Address);
 void LCD_Set_Cursor(LCD_I2C_HandleTypeDef *p_LCD, uint8_t p_col, uint8_t p_row);	// set cursor in the display
