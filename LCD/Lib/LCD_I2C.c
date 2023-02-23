@@ -12,7 +12,7 @@ void LCD_Send_cmd(LCD_I2C_HandleTypeDef *p_LCD, char p_cmd)
 	p_data[2] = p_data_L |0X0C;
 	p_data[3] = p_data_L |0X08;
 
-	HAL_I2C_Master_Transmit(p_LCD->hi2c, p_LCD->Slave_address,(uint8_t *) p_data, 4, 1000);
+	HAL_I2C_Master_Transmit(p_LCD->hi2c, p_LCD->Slave_address,(uint8_t *) p_data, 4, 100);
 }
 void LCD_Send_data(LCD_I2C_HandleTypeDef *p_LCD, char p_data)
 {
@@ -30,18 +30,9 @@ void LCD_Send_data(LCD_I2C_HandleTypeDef *p_LCD, char p_data)
 }
 void LCD_Set_Cursor(LCD_I2C_HandleTypeDef *p_LCD, uint8_t p_col, uint8_t p_row)
 {
-	switch(p_row)
-	{
-	case 0:
-		p_col |= 0x80;
-		break;
-	case 1:
-		p_col |= 0xC0;
-		break;
-	}
-	p_LCD->LCD_Rows = p_row;
-	p_LCD->LCD_Columns = p_col;
-	LCD_Send_cmd(p_LCD, p_LCD->LCD_Columns);
+	uint8_t t_row_Offets[] = {0x00, 0x40, 0x14, 0x54};
+	if(p_row > p_LCD->LCD_Rows) p_row = p_LCD->LCD_Rows - 1;
+	LCD_Send_cmd(p_LCD, 0x80 | (p_col + t_row_Offets[p_row]));
 }
 void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8_t p_col, uint8_t p_row, uint8_t p_Slave_Address)
 {
