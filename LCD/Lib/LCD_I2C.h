@@ -1,8 +1,9 @@
 #ifndef LCD_I2C_H_
 #define LCD_I2C_H_
 
-#include "main.h"
+// #include "main.h"
 #include "stdio.h"
+extern I2C_HandleTypeDef hi2c2;
 
 // commands
 #define	LCD_CLEARDISPLAY				0x01
