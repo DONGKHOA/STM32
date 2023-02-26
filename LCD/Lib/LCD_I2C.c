@@ -65,7 +65,7 @@ void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8
 	HAL_Delay(1);
 	LCD_Send_cmd(p_LCD, 0x06); //Entry mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
 	HAL_Delay(1);
-	LCD_Send_cmd(p_LCD, 0x0C); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
+	LCD_Send_cmd(p_LCD, LCD_DISPLAYCONTROL | p_LCD->LCD_Display_Option); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
 
 }
 
