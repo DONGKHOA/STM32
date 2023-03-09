@@ -158,11 +158,13 @@ int main(void)
 	  if(rate > 10000)
 	  {
 		  LCD_Set_Cursor(&P_LCD, 0, 2);
-		  LCD_Send_String(&P_LCD, "PLEASE");
+		  LCD_Send_String(&P_LCD, "PLEASE REVERSE!!!");
 	  }
 	  else
 	  {
-		  int32_t temp = 0;
+		  LCD_Set_Cursor(&P_LCD, 0, 2);
+		  LCD_Send_String(&P_LCD, "                 ");
+		  int8_t temp = 0;
 		  for(int i = 0; i < 8; i++)
 		  {
 			  temp = rate%(10);
