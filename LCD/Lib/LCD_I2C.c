@@ -32,7 +32,7 @@ void LCD_Set_Cursor(LCD_I2C_HandleTypeDef *p_LCD, uint8_t p_col, uint8_t p_row)
 {
 	uint8_t t_row_Offets[] = {0x00, 0x40, 0x14, 0x54};
 	if(p_row > p_LCD->LCD_Rows) p_row = p_LCD->LCD_Rows - 1;
-	LCD_Send_cmd(p_LCD, 0x80 | (p_col + t_row_Offets[p_row]));
+	LCD_Send_cmd(p_LCD, LCD_CURSORLLINE | (p_col + t_row_Offets[p_row]));
 }
 void LCD_I2C_Init(LCD_I2C_HandleTypeDef *p_LCD, I2C_HandleTypeDef *p_hi2c, uint8_t p_col, uint8_t p_row, uint8_t p_Slave_Address)
 {

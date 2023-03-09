@@ -1,9 +1,9 @@
 #ifndef LCD_I2C_H_
 #define LCD_I2C_H_
 
- #include "main.h"
+#include "main.h"
 #include "stdio.h"
-//extern I2C_HandleTypeDef hi2c2;
+
 
 // commands
 #define	LCD_CLEARDISPLAY				0x01
@@ -12,8 +12,7 @@
 #define LCD_FUNCTIONSET 				0x28
 
 // display
-#define LCD_CURSORLLINE1_1				0x80
-#define LCD_CURSORLLINE2_1				0xC0
+#define LCD_CURSORLLINE					0x80
 
 
 // flags for display on/off control
