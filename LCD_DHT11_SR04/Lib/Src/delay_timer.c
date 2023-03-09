@@ -20,11 +20,8 @@ void DELAY_Tim_Us(TIM_HandleTypeDef *htim, uint16_t time_us)
 
 void DELAY_Tim_Ms(TIM_HandleTypeDef *htim, uint16_t time_ms)
 {
-	HAL_TIM_Base_Start(htim);
-	htim -> Instance -> CNT = 0;
 	while(time_ms--)
 	{
-		while((htim -> Instance -> CNT ) < 1000);
+		DELAY_Tim_Us(htim, 1000);
 	}
-	HAL_TIM_Base_Stop(htim);
 }

@@ -12,3 +12,236 @@ Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04.list
  
+20:12:08 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/Src/delay_timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/Src/delay_timer.d" -MT"Lib/Src/delay_timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/Src/delay_timer.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8448	     20	   1716	  10184	   27c8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:13:05 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1716	  10116	   2784	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:13:35 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8448	     20	   1716	  10184	   27c8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:16:48 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8444	     20	   1716	  10180	   27c4	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:31:57 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8416	     20	   1716	  10152	   27a8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:33:18 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8416	     20	   1716	  10152	   27a8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+20:36:53 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/Src/delay_timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/Src/delay_timer.d" -MT"Lib/Src/delay_timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/Src/delay_timer.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8416	     20	   1716	  10152	   27a8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:49:07 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8416	     20	   1716	  10152	   27a8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:51:56 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '500000' to '41248' [-Woverflow]
+  107 |    DELAY_Tim_Us(&htim4, 500000);
+      |                         ^~~~~~
+../Core/Src/main.c:109:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '500000' to '41248' [-Woverflow]
+  109 |    DELAY_Tim_Us(&htim4, 500000);
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:52:35 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '5000000' to '19264' [-Woverflow]
+  107 |    DELAY_Tim_Us(&htim4, 5000000);
+      |                         ^~~~~~~
+../Core/Src/main.c:109:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '5000000' to '19264' [-Woverflow]
+  109 |    DELAY_Tim_Us(&htim4, 5000000);
+      |                         ^~~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:52:52 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+20:53:23 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:53:50 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:54:31 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '500000' to '41248' [-Woverflow]
+  107 |    DELAY_Tim_Us(&htim4, 500000);
+      |                         ^~~~~~
+../Core/Src/main.c:109:25: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '500000' to '41248' [-Woverflow]
+  109 |    DELAY_Tim_Us(&htim4, 500000);
+      |                         ^~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8404	     20	   1716	  10140	   279c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:55:14 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8344	     20	   1716	  10080	   2760	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
+20:59:01 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/Src/delay_timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/Src/delay_timer.d" -MT"Lib/Src/delay_timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/Src/delay_timer.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+   8448	     20	   1716	  10184	   27c8	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
