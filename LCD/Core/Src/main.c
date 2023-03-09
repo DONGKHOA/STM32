@@ -23,7 +23,6 @@
 /* USER CODE BEGIN Includes */
 #include "LCD_I2C.h"
 #include "string.h"
-#include "math.h"
 
 /* USER CODE END Includes */
 
@@ -50,9 +49,15 @@ TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN PV */
 LCD_I2C_HandleTypeDef P_LCD;
 
-char data_t_res[4] = "0000";
-char data_t_set[4] = "0000";
+char data[9] = "00000000";
 int32_t rate = 0;
+uint8_t condition = 0;
+
+uint8_t current_state = 1;
+uint8_t last_state = 1;
+uint8_t deboucing_state = 1;
+uint8_t is_deboucing = 0;
+uint32_t deboucing_timer = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -66,9 +71,36 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void BUTTON_Handle()
+void BUTTON_Handel()
 {
+	// detecting
+	uint8_t temp_state = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2);
+	if(temp_state != deboucing_state)
+	{
+		deboucing_state = temp_state;
+		deboucing_timer = HAL_GetTick();
+		is_deboucing = 1;
+	}
 
+	// deboucing
+	if(is_deboucing == 1 && (HAL_GetTick() - deboucing_timer) > 15)
+	{
+		current_state = deboucing_state;
+		is_deboucing = 0;
+	}
+
+	if(current_state != last_state)
+	{
+		if(current_state == 0)
+		{
+			condition = 1;
+		}
+		else
+		{
+			condition = 0;
+		}
+		last_state = current_state;
+	}
 }
 /* USER CODE END 0 */
 
@@ -105,7 +137,13 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LCD_I2C_Init(&P_LCD, &hi2c1, 20, 4, SLAVE_ADDRESS<<1);
   HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-
+  LCD_Set_Clear(&P_LCD);
+  LCD_Set_Cursor(&P_LCD, 0, 0);
+  LCD_Send_String(&P_LCD, "RES:");
+  LCD_Set_Cursor(&P_LCD, 0, 1);
+  LCD_Send_String(&P_LCD, "SET:");
+  LCD_Set_Cursor(&P_LCD, 6, 1);
+  LCD_Send_String(&P_LCD, &data);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -115,34 +153,29 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  LCD_Set_Cursor(&P_LCD, 0, 0);
-	  LCD_Send_String(&P_LCD, "RES:");
-	  LCD_Set_Cursor(&P_LCD, 0, 1);
-	  LCD_Send_String(&P_LCD, "SET:");
-	  LCD_Set_Cursor(&P_LCD, 6, 0);
-	  LCD_Send_String(&P_LCD, &data_t_res);
-	  LCD_Set_Cursor(&P_LCD, 6, 1);
-	  LCD_Send_String(&P_LCD, &data_t_set);
+	  BUTTON_Handel();
 	  rate = (TIM2 -> CNT) >> 2;
 	  if(rate > 10000)
 	  {
-		  LCD_Set_Cursor(&P_LCD, 0, 3);
+		  LCD_Set_Cursor(&P_LCD, 0, 2);
 		  LCD_Send_String(&P_LCD, "PLEASE");
 	  }
 	  else
 	  {
-		  int8_t temp = 0;
-		  for(int i = 0; i < strlen(data_t_res); i++)
+		  int32_t temp = 0;
+		  for(int i = 0; i < 8; i++)
 		  {
 			  temp = rate%(10);
-			  data_t_res[3-i] = temp + 48;
-			  data_t_set[3-i] = temp + 48;
+			  data[8 - 1 -i] = temp + 48;
 			  rate /= 10;
 		  }
 		  LCD_Set_Cursor(&P_LCD, 6, 0);
-		  LCD_Send_String(&P_LCD, &data_t_res);
+		  LCD_Send_String(&P_LCD, &data);
+	  }
+	  if(condition)
+	  {
 		  LCD_Set_Cursor(&P_LCD, 6, 1);
-		  LCD_Send_String(&P_LCD, &data_t_set);
+		  LCD_Send_String(&P_LCD, &data);
 	  }
   }
   /* USER CODE END 3 */
@@ -287,20 +320,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PC13 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA2 */
   GPIO_InitStruct.Pin = GPIO_PIN_2;
