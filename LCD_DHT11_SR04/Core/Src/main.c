@@ -102,7 +102,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  distance = GET_Distance(&htim1, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
+	  distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
 //	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
 //	  DELAY_Tim_Ms(&htim4, 500);
 ////	  HAL_Delay(500);

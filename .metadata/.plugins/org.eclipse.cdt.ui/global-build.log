@@ -245,3 +245,30 @@ Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04.list
  
+21:03:04 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Lib/Src/delay_timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/Src/delay_timer.d" -MT"Lib/Src/delay_timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Lib/Src/delay_timer.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:29: error: 'htim1' undeclared (first use in this function); did you mean 'htim4'?
+  105 |    distance = GET_Distance(&htim1, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
+      |                             ^~~~~
+      |                             htim4
+../Core/Src/main.c:105:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:03:32 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LCD_DHT11_SR04.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04.elf  > "LCD_DHT11_SR04.list"
+   text	   data	    bss	    dec	    hex	filename
+  10180	     20	   1716	  11916	   2e8c	LCD_DHT11_SR04.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04.list
+ 
