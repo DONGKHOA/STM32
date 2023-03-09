@@ -18,11 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "string.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "LCD_I2C.h"
+#include "string.h"
+#include "math.h"
 
 /* USER CODE END Includes */
 
@@ -49,7 +50,8 @@ TIM_HandleTypeDef htim2;
 /* USER CODE BEGIN PV */
 LCD_I2C_HandleTypeDef P_LCD;
 
-char data_t[50];
+char data_t_res[4] = "0000";
+char data_t_set[4] = "0000";
 int32_t rate = 0;
 /* USER CODE END PV */
 
@@ -64,7 +66,10 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void BUTTON_Handle()
+{
 
+}
 /* USER CODE END 0 */
 
 /**
@@ -110,24 +115,40 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  rate = TIM2 -> CNT;
-
-	  for(int i = 0; i < strlen(data_t); i++)
+	  LCD_Set_Cursor(&P_LCD, 0, 0);
+	  LCD_Send_String(&P_LCD, "RES:");
+	  LCD_Set_Cursor(&P_LCD, 0, 1);
+	  LCD_Send_String(&P_LCD, "SET:");
+	  LCD_Set_Cursor(&P_LCD, 6, 0);
+	  LCD_Send_String(&P_LCD, &data_t_res);
+	  LCD_Set_Cursor(&P_LCD, 6, 1);
+	  LCD_Send_String(&P_LCD, &data_t_set);
+	  rate = (TIM2 -> CNT) >> 2;
+	  if(rate > 10000)
 	  {
-
+		  LCD_Set_Cursor(&P_LCD, 0, 3);
+		  LCD_Send_String(&P_LCD, "PLEASE");
 	  }
-	  for(int i = 0; i<=10; i++)
+	  else
 	  {
-		  LCD_Set_Cursor(&P_LCD, i, 0);
-		  LCD_Send_String(&P_LCD, &data_t);
-		  HAL_Delay(500);
-		  LCD_Set_Clear(&P_LCD);
+		  int8_t temp = 0;
+		  for(int i = 0; i < strlen(data_t_res); i++)
+		  {
+			  temp = rate%(10);
+			  data_t_res[3-i] = temp + 48;
+			  data_t_set[3-i] = temp + 48;
+			  rate /= 10;
+		  }
+		  LCD_Set_Cursor(&P_LCD, 6, 0);
+		  LCD_Send_String(&P_LCD, &data_t_res);
+		  LCD_Set_Cursor(&P_LCD, 6, 1);
+		  LCD_Send_String(&P_LCD, &data_t_set);
 	  }
   }
   /* USER CODE END 3 */
 }
 
-/*
+/**
   * @brief System Clock Configuration
   * @retval None
   */
@@ -280,6 +301,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
