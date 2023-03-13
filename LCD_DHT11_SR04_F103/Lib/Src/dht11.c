@@ -17,6 +17,7 @@ static void Set_Pin_Out(DHT11_HandleTypeDef *DHT)
     GPIO_InitStruct.Pin = DHT->GPIO_Pin_DHT11;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(DHT->GPIO_DHT11, &GPIO_InitStruct);
 }
 
@@ -26,7 +27,6 @@ static void Set_Pin_In(DHT11_HandleTypeDef *DHT)
     GPIO_InitStruct.Pin = DHT->GPIO_Pin_DHT11;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(DHT->GPIO_DHT11, &GPIO_InitStruct);
 }
 
@@ -64,7 +64,7 @@ static uint8_t DHT_Check_Response(DHT11_HandleTypeDef *DHT)
         }
         else
         {
-            response = 0;
+            response = -1;
         }
     }
 
@@ -129,16 +129,17 @@ void DHT11_Init(DHT11_HandleTypeDef *DHT, TIM_HandleTypeDef *htim, GPIO_TypeDef 
  */
 void DHT_Read_Temperature_Humidity(DHT11_HandleTypeDef *DHT)
 {
-    uint8_t Temp1, Temp2, RH1, RH2;
-    uint16_t Temp, Humi, SUM = 0;
-    DHT11_Start(DHT);
+    uint8_t temp1, temp2, RH1, RH2;
+    uint16_t SUM = 0;
+    float temp, humi;
+    DHT_Check_Response(DHT);
     RH1 = DHT_Read(DHT);   // Read natural part of humidity
     RH2 = DHT_Read(DHT);   // Read decimal part of humidity
-    Temp1 = DHT_Read(DHT); // Read natural part of temperature
-    Temp2 = DHT_Read(DHT); // Read decimal part of temperature
+    temp1 = DHT_Read(DHT); // Read natural part of temperature
+    temp2 = DHT_Read(DHT); // Read decimal part of temperature
     SUM = DHT_Read(DHT);   // Read sum of the previous 4 bytes
-    Temp = (Temp1 << 8) | Temp2;
-    Humi = (RH1 << 8) | RH2;
-    DHT->Temp = (float)(Temp / 10.0);
-    DHT->Hum = (float)(Humi / 10.0);
+    temp = (float) temp1 + (float) (temp2/ 10.0);
+    humi = (float) RH1 + (float) (RH2/ 10.0);
+    DHT->Temp = temp;
+    DHT->Hum = humi;
 }

@@ -26,7 +26,9 @@
 #include "lcd_i2c.h"
 #include "button.h"
 #include "dht11.h"
+
 #include "string.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,17 +60,19 @@ DHT11_HandleTypeDef dht_0;
 uint8_t condition = 0;
 uint16_t rate = 0;
 uint8_t start = 1;
+uint32_t time_pressing = 0;
 
 // LCD
-
-char data_distance[5] = "0000";
+char data_distance[5];
+char data_temp[6];
+char data_humi[6];
 
 // SR_04
 uint8_t distance = 0;
 
 // DHT_11
-float temp = 0;
-float humi = 0;
+float temperature = 0;
+float humidity = 0;
 
 // MODE
 
@@ -108,47 +112,48 @@ void EFFECT_Handle()
       if (start)
       {
         LCD_Set_Clear(&lcd_0);
-        LCD_Set_Cursor(&lcd_0, 0, 0);
-        LCD_Send_String(&lcd_0, "DISTANCE");
       }
-      if (condition)
+      start = 0;
+      if ((HAL_GetTick() - time_pressing) >= 500)
       {
-        start = 0;
         distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
-        int8_t temp = 0;
-        for (int i = 0; i < 4; i++)
+        LCD_Set_Cursor(&lcd_0, 0, 0);
+        if (distance >= 10)
         {
-          temp = distance % (10);
-          data_distance[4 - 1 - i] = temp + 48;
-          distance /= 10;
+          sprintf(data_distance, "DISTANCE: %d", distance);
         }
-        LCD_Set_Cursor(&lcd_0, 9, 0);
-        LCD_Send_String(&lcd_0, &data_distance);
-        DELAY_Tim_Ms(&htim4, 500);
+        else
+        {
+          sprintf(data_distance, "DISTANCE:  %d", distance); // remove redundant characters
+        }
+        LCD_Send_String(&lcd_0, data_distance);
+        time_pressing = HAL_GetTick();
       }
-      else
-      {
-        start = 1;
-      }
+
       break;
 
     case DHT11:
-	if (start)
-	{
-		LCD_Set_Clear(&lcd_0);
-	}
-    if (condition)
-    {
+      if (start)
+      {
+        LCD_Set_Clear(&lcd_0);
+      }
       start = 0;
-      DHT_Read_Temperature_Humidity(&dht_0);
-      temp = dht_0.Temp;
-      humi = dht_0.Hum;
-      DELAY_Tim_Ms(&htim4, 500);
-    }
-    else
-    {
-      start = 1;
-    }
+      if ((HAL_GetTick() - time_pressing) >= 500)
+      {
+        DHT_Read_Temperature_Humidity(&dht_0);
+        temperature = dht_0.Temp;
+        humidity = dht_0.Hum;
+        LCD_Set_Cursor(&lcd_0, 0, 0);
+        sprintf(data_temp, "Tempe: %.2f ", temperature);
+        LCD_Send_String(&lcd_0, data_temp);
+        LCD_Send_data(&lcd_0, 'C');
+
+        LCD_Set_Cursor(&lcd_0, 0, 1);
+        sprintf(data_humi, "Hum: %.2f ", humidity);
+        LCD_Send_String(&lcd_0, data_humi);
+        LCD_Send_data(&lcd_0, '%');
+        time_pressing = HAL_GetTick();
+      }
       break;
 
     default:
@@ -171,11 +176,13 @@ void EFFECT_Handle()
     if (rate % 2)
     {
       LCD_Send_String(&lcd_0, "SR04 ");
+      start = 1;
       effect = SR_04;
     }
     else
     {
       LCD_Send_String(&lcd_0, "DHT11");
+      start = 1;
       effect = DHT11;
     }
   }
@@ -218,7 +225,7 @@ int main(void)
   HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
   BUTTON_Init(&button_0, GPIOA, GPIO_PIN_2);
   LCD_I2C_Init(&lcd_0, &hi2c1, 20, 4, SLAVE_ADDRESS << 1);
-  DHT11_Init(&dht_0, &htim4, GPIOA, GPIO_PIN_3);
+  DHT11_Init(&dht_0, &htim4, GPIOA, GPIO_PIN_4);
   /* USER CODE END 2 */
 
   /* Infinite loop */

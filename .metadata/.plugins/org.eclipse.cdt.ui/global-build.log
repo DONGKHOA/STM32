@@ -1,100 +1,168 @@
-23:38:49 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+01:02:48 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
 make -j8 all 
-arm-none-eabi-gcc "../Lib/Src/dht11.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Lib/Src/dht11.d" -MT"Lib/Src/dht11.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Lib/Src/dht11.o"
-../Lib/Src/dht11.c: In function 'DHT_Read_Temperature_Humidity':
-../Lib/Src/dht11.c:133:26: warning: variable 'SUM' set but not used [-Wunused-but-set-variable]
-  133 |     uint16_t Temp, Humi, SUM = 0;
-      |                          ^~~
-At top level:
-../Lib/Src/dht11.c:53:16: warning: 'DHT_Check_Response' defined but not used [-Wunused-function]
-   53 | static uint8_t DHT_Check_Response(DHT11_HandleTypeDef *DHT)
-      |                ^~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:133:33: warning: 'Tempe: ' directive writing 7 bytes into a region of size 6 [-Wformat-overflow=]
+  133 |       sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                           ~~~~~~^
+../Core/Src/main.c:133:26: note: assuming directive output of 4 bytes
+  133 |       sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                          ^~~~~~~~~~~~~~
+../Core/Src/main.c:133:7: note: 'sprintf' output between 12 and 322 bytes into a destination of size 6
+  133 |       sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:138:32: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 1 [-Wformat-overflow=]
+  138 |       sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                                ^~~~
+../Core/Src/main.c:138:26: note: assuming directive output of 4 bytes
+  138 |       sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                          ^~~~~~~~~~~~
+../Core/Src/main.c:138:7: note: 'sprintf' output between 10 and 320 bytes into a destination of size 6
+  138 |       sprintf(data_humi, "Hum: %.2f ", humidity);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:36: warning: 'DISTANCE: ' directive writing 10 bytes into a region of size 5 [-Wformat-overflow=]
+  118 |       sprintf(data_distance, "DISTANCE: %d", distance);
+      |                               ~~~~~^~~~~
+../Core/Src/main.c:118:7: note: 'sprintf' output between 12 and 14 bytes into a destination of size 5
+  118 |       sprintf(data_distance, "DISTANCE: %d", distance);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LCD_DHT11_SR04_F103.elf
  
 arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
 arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
    text	   data	    bss	    dec	    hex	filename
-  13744	     32	   1864	  15640	   3d18	LCD_DHT11_SR04_F103.elf
+  35860	    492	   1900	  38252	   956c	LCD_DHT11_SR04_F103.elf
 Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04_F103.list
  
-23:38:58 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+01:03:09 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
 make -j8 all 
 arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
    text	   data	    bss	    dec	    hex	filename
-  13744	     32	   1864	  15640	   3d18	LCD_DHT11_SR04_F103.elf
+  35860	    492	   1900	  38252	   956c	LCD_DHT11_SR04_F103.elf
 Finished building: default.size.stdout
  
-23:43:57 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+01:09:32 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'EFFECT_Handle':
-../Core/Src/main.c:126:33: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
-  126 |         LCD_Send_String(&lcd_0, &data_distance);
-      |                                 ^~~~~~~~~~~~~~
-      |                                 |
-      |                                 char (*)[5]
-In file included from ../Core/Src/main.c:26:
-C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
-   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
-      |                                                    ~~~~~~^~~
-arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:140:35: warning: 'Tempe: ' directive writing 7 bytes into a region of size 6 [-Wformat-overflow=]
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                             ~~~~~~^
+../Core/Src/main.c:140:28: note: assuming directive output of 4 bytes
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                            ^~~~~~~~~~~~~~
+../Core/Src/main.c:140:9: note: 'sprintf' output between 12 and 322 bytes into a destination of size 6
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:145:34: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 1 [-Wformat-overflow=]
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                                  ^~~~
+../Core/Src/main.c:145:28: note: assuming directive output of 4 bytes
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                            ^~~~~~~~~~~~
+../Core/Src/main.c:145:9: note: 'sprintf' output between 10 and 320 bytes into a destination of size 6
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:38: warning: 'DISTANCE: ' directive writing 10 bytes into a region of size 5 [-Wformat-overflow=]
+  121 |         sprintf(data_distance, "DISTANCE: %d", distance);
+      |                                 ~~~~~^~~~~
+../Core/Src/main.c:121:9: note: 'sprintf' output between 12 and 14 bytes into a destination of size 5
+  121 |         sprintf(data_distance, "DISTANCE: %d", distance);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LCD_DHT11_SR04_F103.elf
  
 arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
 arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
    text	   data	    bss	    dec	    hex	filename
-  13776	     32	   1864	  15672	   3d38	LCD_DHT11_SR04_F103.elf
-Finished building: default.size.stdout
- 
-Finished building: LCD_DHT11_SR04_F103.list
- 
-23:45:36 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'EFFECT_Handle':
-../Core/Src/main.c:126:33: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
-  126 |         LCD_Send_String(&lcd_0, &data_distance);
-      |                                 ^~~~~~~~~~~~~~
-      |                                 |
-      |                                 char (*)[5]
-In file included from ../Core/Src/main.c:26:
-C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
-   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
-      |                                                    ~~~~~~^~~
-arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: LCD_DHT11_SR04_F103.elf
- 
-arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
-arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
-   text	   data	    bss	    dec	    hex	filename
-  13760	     32	   1864	  15656	   3d28	LCD_DHT11_SR04_F103.elf
+  35876	    492	   1908	  38276	   9584	LCD_DHT11_SR04_F103.elf
 Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04_F103.list
  
-23:47:50 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+01:13:56 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'EFFECT_Handle':
-../Core/Src/main.c:126:33: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
-  126 |         LCD_Send_String(&lcd_0, &data_distance);
-      |                                 ^~~~~~~~~~~~~~
-      |                                 |
-      |                                 char (*)[5]
-In file included from ../Core/Src/main.c:26:
-C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
-   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
-      |                                                    ~~~~~~^~~
-arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c:140:35: warning: 'Tempe: ' directive writing 7 bytes into a region of size 6 [-Wformat-overflow=]
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                             ~~~~~~^
+../Core/Src/main.c:140:28: note: assuming directive output of 4 bytes
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                            ^~~~~~~~~~~~~~
+../Core/Src/main.c:140:9: note: 'sprintf' output between 12 and 322 bytes into a destination of size 6
+  140 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:145:34: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 1 [-Wformat-overflow=]
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                                  ^~~~
+../Core/Src/main.c:145:28: note: assuming directive output of 4 bytes
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                            ^~~~~~~~~~~~
+../Core/Src/main.c:145:9: note: 'sprintf' output between 10 and 320 bytes into a destination of size 6
+  145 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:38: warning: 'DISTANCE: ' directive writing 10 bytes into a region of size 5 [-Wformat-overflow=]
+  121 |         sprintf(data_distance, "DISTANCE: %d", distance);
+      |                                 ~~~~~^~~~~
+../Core/Src/main.c:121:9: note: 'sprintf' output between 12 and 14 bytes into a destination of size 5
+  121 |         sprintf(data_distance, "DISTANCE: %d", distance);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: LCD_DHT11_SR04_F103.elf
  
 arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
 arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
    text	   data	    bss	    dec	    hex	filename
-  14552	     32	   1864	  16448	   4040	LCD_DHT11_SR04_F103.elf
+  35868	    492	   1908	  38268	   957c	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+01:18:16 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:147:35: warning: 'Tempe: ' directive writing 7 bytes into a region of size 6 [-Wformat-overflow=]
+  147 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                             ~~~~~~^
+../Core/Src/main.c:147:28: note: assuming directive output of 4 bytes
+  147 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |                            ^~~~~~~~~~~~~~
+../Core/Src/main.c:147:9: note: 'sprintf' output between 12 and 322 bytes into a destination of size 6
+  147 |         sprintf(data_temp, "Tempe: %.2f ", temperature);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:152:34: warning: '%.2f' directive writing between 3 and 313 bytes into a region of size 1 [-Wformat-overflow=]
+  152 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                                  ^~~~
+../Core/Src/main.c:152:28: note: assuming directive output of 4 bytes
+  152 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |                            ^~~~~~~~~~~~
+../Core/Src/main.c:152:9: note: 'sprintf' output between 10 and 320 bytes into a destination of size 6
+  152 |         sprintf(data_humi, "Hum: %.2f ", humidity);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:127:40: warning: 'DISTANCE:  ' directive writing 11 bytes into a region of size 5 [-Wformat-overflow=]
+  127 |           sprintf(data_distance, "DISTANCE:  %d", distance); // remove redundant characters
+      |                                   ~~~~~^~~~~~
+../Core/Src/main.c:127:11: note: 'sprintf' output between 13 and 15 bytes into a destination of size 5
+  127 |           sprintf(data_distance, "DISTANCE:  %d", distance); // remove redundant characters
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:40: warning: 'DISTANCE: ' directive writing 10 bytes into a region of size 5 [-Wformat-overflow=]
+  123 |           sprintf(data_distance, "DISTANCE: %d", distance);
+      |                                   ~~~~~^~~~~
+../Core/Src/main.c:123:11: note: 'sprintf' output between 12 and 14 bytes into a destination of size 5
+  123 |           sprintf(data_distance, "DISTANCE: %d", distance);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  35916	    492	   1908	  38316	   95ac	LCD_DHT11_SR04_F103.elf
 Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04_F103.list
