@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2023 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -23,6 +23,9 @@
 /* USER CODE BEGIN Includes */
 #include "sr04.h"
 #include "delay_timer.h"
+#include "lcd_i2c.h"
+#include "button.h"
+#include "dht11.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SLAVE_ADDRESS 0x27
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -40,11 +44,36 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+I2C_HandleTypeDef hi2c1;
+
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
+BUTTON_HandleTypeDef button_0;
+LCD_I2C_HandleTypeDef lcd_0;
+
 uint8_t distance = 0;
+uint8_t condition = 0;
+int16_t rate = 0;
+
+// LCD
+
+char data_distance[5] = "0000";
+char data_sr04[10] = "MODE SR_04";
+char data_dht11[10] = "MODE DHT11";
+
+
+// MODE
+
+enum MODE_t
+{
+  SELECT = 0,
+  SR_04 = 1,
+  DHT11 = 2
+};
+
+uint8_t effect = SELECT;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -52,13 +81,77 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM4_Init(void);
+static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void BUTTON_Pressing_Callback(BUTTON_HandleTypeDef *ButtonX)
+{
+  condition = ~condition;
+}
 
+void EFFECT_Handle()
+{
+  switch (effect)
+  {
+  case SELECT:
+    LCD_Set_Cursor(&lcd_0, 0, 0);
+    LCD_Send_String(&lcd_0, "PLEASE CHOOSE MODE");
+    LCD_Set_Cursor(&lcd_0, 0, 1);
+    LCD_Send_String(&lcd_0, "MODE 1: SR04");
+    LCD_Set_Cursor(&lcd_0, 0, 2);
+    LCD_Send_String(&lcd_0, "MODE 2: DHT11");
+    LCD_Set_Cursor(&lcd_0, 0, 3);
+    LCD_Send_String(&lcd_0, "SELECT:");
+
+    LCD_Set_Cursor(&lcd_0, 8, 3);
+    rate = (TIM3 -> CNT) >> 2;
+    if(rate%2)
+    {
+      LCD_Send_String(&lcd_0, &data_sr04);
+      effect = SR_04;
+    }
+    else
+    {
+      LCD_Send_String(&lcd_0, &data_dht11);
+      effect = DHT11;
+    }
+    break;
+
+  case SR_04:
+    distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
+    if (condition)
+    {
+      int8_t temp = 0;
+      for (int i = 0; i < 4; i++)
+      {
+        temp = rate%(10);
+			  data_distance[4 - 1 -i] = temp + 48;
+			  rate /= 10;
+      }
+      LCD_Set_Cursor(&lcd_0, 0, 0);
+      LCD_Send_String(&lcd_0, "DISTANCE");
+      LCD_Set_Cursor(&lcd_0, 9, 0);
+      LCD_Send_String(&lcd_0, &data_distance);
+    }
+    else
+    {
+      effect = SELECT;
+    }
+    
+    break;
+
+  case DHT11:
+
+    break;
+
+  default:
+    break;
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -91,8 +184,12 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   DELAY_Tim_Init(&htim4);
+  HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
+  BUTTON_Init(&button_0, GPIOA, GPIO_PIN_2);
+  LCD_I2C_Init(&lcd_0, &hi2c1, 20, 4, SLAVE_ADDRESS << 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,15 +199,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
-//	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-//	  DELAY_Tim_Ms(&htim4, 500);
-////	  HAL_Delay(500);
-//	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-//	  DELAY_Tim_Ms(&htim4, 500);
-//	  HAL_Delay(500);
-//	  HAL_Delay(500);
-
+    BUTTON_Handel(&button_0);
+    EFFECT_Handle();
   }
   /* USER CODE END 3 */
 }
@@ -158,6 +248,40 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
 }
 
 /**
@@ -267,6 +391,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
@@ -294,11 +419,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(Trig_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : SW_Pin */
-  GPIO_InitStruct.Pin = SW_Pin;
+  /*Configure GPIO pin : PA2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(SW_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 

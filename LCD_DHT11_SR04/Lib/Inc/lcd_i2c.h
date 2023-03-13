@@ -48,4 +48,4 @@ void LCD_Send_cmd(LCD_I2C_HandleTypeDef *p_LCD, char p_cmd);   // send commands 
 void LCD_Send_data(LCD_I2C_HandleTypeDef *p_LCD, char p_data); // send data to the LCD
 void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
 void LCD_Set_Clear(LCD_I2C_HandleTypeDef *p_LCD);
-#endif /*LCD_I2C_H_*/
+#endif /* LCD_I2C_H_ */

@@ -99,8 +99,8 @@ int main(void)
 //	  HAL_Delay(1000);
 //	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
 //	  HAL_Delay(1000);
-//	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-//	  HAL_Delay(500);
+	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+	  HAL_Delay(500);
 //	  if((HAL_GetTick() - led_timer) >=500)
 //	  {
 //		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);

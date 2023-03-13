@@ -1,39 +1,68 @@
 #include "button.h"
 
+__weak void BUTTON_Pressing_Callback(BUTTON_HandleTypeDef *ButtonX)
+{
+
+}
+
+__weak void BUTTON_Releasing_Callback(BUTTON_HandleTypeDef *ButtonX)
+{
+
+}
+
 /**
- * It's a function that debounces a button
- * 
+ * This function initializes the button by setting the GPIO port and pin, the current state, the last
+ * state, the debouncing state, the debouncing flag, and the debouncing timer
+ *
+ * @param ButtonX The button you want to initialize
  * @param GPIO_Button The GPIO port that the button is connected to.
- * @param GPIO_Pin_Button The pin that the button is connected to.
+ * @param GPIO_Pin_Button The pin number of the button.
  */
-void BUTTON_Handel(GPIO_TypeDef *GPIO_Button, uint16_t GPIO_Pin_Button)
+void BUTTON_Init(BUTTON_HandleTypeDef *ButtonX, GPIO_TypeDef *GPIO_Button, uint16_t GPIO_Pin_Button)
+{
+	ButtonX->GPIO_Button = GPIO_Button;
+	ButtonX->GPIO_Pin_Button = GPIO_Pin_Button;
+	ButtonX->current_state = 1;
+	ButtonX->last_state = 1;
+	ButtonX->deboucing_state = 1;
+	ButtonX->is_deboucing = 0;
+	ButtonX->deboucing_timer = 0;
+}
+
+/**
+ * If the button is pressed, call the pressing callback function, if the button is released, call the
+ * releasing callback function.
+ *
+ * @param ButtonX The button you want to handle.
+ */
+void BUTTON_Handel(BUTTON_HandleTypeDef *ButtonX)
 {
 	// detecting
-	uint8_t temp_state = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-	if(temp_state != deboucing_state)
+	uint8_t temp_state = HAL_GPIO_ReadPin(ButtonX->GPIO_Button, ButtonX->GPIO_Pin_Button);
+	if (temp_state != ButtonX->deboucing_state)
 	{
-		deboucing_state = temp_state;
-		deboucing_timer = HAL_GetTick();
-		is_deboucing = 1;
+		ButtonX->deboucing_state = temp_state;
+		ButtonX->deboucing_timer = HAL_GetTick();
+		ButtonX->is_deboucing = 1;
 	}
 
 	// deboucing
-	if(is_deboucing == 1 && (HAL_GetTick() - deboucing_timer) > 15)
+	if (ButtonX->is_deboucing == 1 && (HAL_GetTick() - ButtonX->deboucing_timer) > 15)
 	{
-		current_state = deboucing_state;
-		is_deboucing = 0;
+		ButtonX->current_state = ButtonX->deboucing_state;
+		ButtonX->is_deboucing = 0;
 	}
 
-	if(current_state != last_state)
+	if (ButtonX->current_state != ButtonX->last_state)
 	{
-		if(current_state == 0)  // Press the button
+		if (ButtonX->current_state == 0) // Press the button
 		{
-			condition = 1;
+			BUTTON_Pressing_Callback(ButtonX);
 		}
-		else                    // Release button
+		else // Release button
 		{
-			condition = 0;
+			BUTTON_Releasing_Callback(ButtonX);
 		}
-		last_state = current_state;
+		ButtonX->last_state = ButtonX->current_state;
 	}
 }
