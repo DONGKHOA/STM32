@@ -8418,3 +8418,18 @@ java.net.UnknownHostException: sw-center.st.com
 	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
 	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-13 19:45:25.904
+!MESSAGE Indexed 'LCD_DHT11_SR04_F103' (17 sources, 78 headers) in 3.48 sec: 3,642 declarations; 13,168 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-13 20:06:04.330
+!MESSAGE Indexed 'LCD_DHT11_SR04_F103' (25 sources, 86 headers) in 2.54 sec: 5,767 declarations; 40,793 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0043%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-03-13 20:06:22.188
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-13 20:13:30.549
+!MESSAGE Indexed 'LCD_DHT11_SR04_F103' (25 sources, 86 headers) in 1.6 sec: 5,767 declarations; 40,793 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0043%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-03-13 20:21:34.844
+!MESSAGE Indexed 'LCD_DHT11_SR04_F103' (25 sources, 86 headers) in 1.63 sec: 5,767 declarations; 40,793 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0043%)
