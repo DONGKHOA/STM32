@@ -76,3 +76,458 @@ Finished building: default.size.stdout
  
 Finished building: LCD_DHT11_SR04_F103.list
  
+21:19:08 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:115:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:120:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  120 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:139:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  139 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13016	     52	   1836	  14904	   3a38	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:19:43 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13016	     52	   1836	  14904	   3a38	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+21:23:41 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13016	     52	   1836	  14904	   3a38	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+21:24:59 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13016	     52	   1836	  14904	   3a38	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+21:28:43 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:115:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:123:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13040	     52	   1836	  14928	   3a50	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:29:02 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13040	     52	   1836	  14928	   3a50	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+21:31:42 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:114:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:122:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  122 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13080	     52	   1836	  14968	   3a78	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:34:04 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:114:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:122:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  122 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13080	     52	   1836	  14968	   3a78	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:35:34 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:114:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:122:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  122 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13080	     52	   1836	  14968	   3a78	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:37:27 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:114:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:122:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  122 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13080	     52	   1836	  14968	   3a78	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:38:31 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:114:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:122:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  122 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:145:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  145 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13080	     52	   1836	  14968	   3a78	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:41:52 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:115:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:123:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:150:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  150 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13104	     56	   1832	  14992	   3a90	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:44:43 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:115:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:123:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:150:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  150 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13160	     56	   1832	  15048	   3ac8	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:45:41 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc" -I"C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'EFFECT_Handle':
+../Core/Src/main.c:115:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |       LCD_Send_String(&lcd_0, &data_sr04);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:123:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  123 |       LCD_Send_String(&lcd_0, &data_dht11);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char (*)[10]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[10]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+../Core/Src/main.c:150:31: warning: passing argument 2 of 'LCD_Send_String' from incompatible pointer type [-Wincompatible-pointer-types]
+  150 |       LCD_Send_String(&lcd_0, &data_distance);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char (*)[5]
+In file included from ../Core/Src/main.c:26:
+C:/Users/thanh/STM32CubeIDE/workspace_1.11.0/LCD_DHT11_SR04_F103/Lib/Inc/lcd_i2c.h:49:58: note: expected 'char *' but argument is of type 'char (*)[5]'
+   49 | void LCD_Send_String(LCD_I2C_HandleTypeDef *p_LCD, char *str); // send string to the LCD
+      |                                                    ~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_DHT11_SR04_F103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.11.0\LCD_DHT11_SR04_F103\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_DHT11_SR04_F103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_DHT11_SR04_F103.elf
+ 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+arm-none-eabi-objdump -h -S  LCD_DHT11_SR04_F103.elf  > "LCD_DHT11_SR04_F103.list"
+   text	   data	    bss	    dec	    hex	filename
+  13160	     56	   1832	  15048	   3ac8	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_DHT11_SR04_F103.list
+ 
+21:47:36 **** Incremental Build of configuration Debug for project LCD_DHT11_SR04_F103 ****
+make -j8 all 
+arm-none-eabi-size   LCD_DHT11_SR04_F103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13160	     56	   1832	  15048	   3ac8	LCD_DHT11_SR04_F103.elf
+Finished building: default.size.stdout
+ 
