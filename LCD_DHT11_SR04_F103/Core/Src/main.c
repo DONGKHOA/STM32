@@ -53,8 +53,8 @@ TIM_HandleTypeDef htim4;
 /* USER CODE BEGIN PV */
 BUTTON_HandleTypeDef button_0;
 LCD_I2C_HandleTypeDef lcd_0;
+DHT11_HandleTypeDef dht_0;
 
-uint8_t distance = 0;
 uint8_t condition = 0;
 uint16_t rate = 0;
 uint8_t start = 1;
@@ -62,19 +62,23 @@ uint8_t start = 1;
 // LCD
 
 char data_distance[5] = "0000";
-char data_sr04[10] = "MODE SR_04";
-char data_dht11[10] = "MODE DHT11";
+
+// SR_04
+uint8_t distance = 0;
+
+// DHT_11
+float temp = 0;
+float humi = 0;
 
 // MODE
 
 enum MODE_t
 {
-  SELECT = 0,
   SR_04 = 1,
   DHT11 = 2
 };
 
-uint8_t effect = SELECT;
+uint8_t effect = SR_04;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,9 +100,63 @@ void BUTTON_Pressing_Callback(BUTTON_HandleTypeDef *ButtonX)
 
 void EFFECT_Handle()
 {
-  switch (effect)
+  if (condition)
   {
-  case SELECT:
+    switch (effect)
+    {
+    case SR_04:
+      if (start)
+      {
+        LCD_Set_Clear(&lcd_0);
+        LCD_Set_Cursor(&lcd_0, 0, 0);
+        LCD_Send_String(&lcd_0, "DISTANCE");
+      }
+      if (condition)
+      {
+        start = 0;
+        distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
+        int8_t temp = 0;
+        for (int i = 0; i < 4; i++)
+        {
+          temp = distance % (10);
+          data_distance[4 - 1 - i] = temp + 48;
+          distance /= 10;
+        }
+        LCD_Set_Cursor(&lcd_0, 9, 0);
+        LCD_Send_String(&lcd_0, &data_distance);
+        DELAY_Tim_Ms(&htim4, 500);
+      }
+      else
+      {
+        start = 1;
+      }
+      break;
+
+    case DHT11:
+	if (start)
+	{
+		LCD_Set_Clear(&lcd_0);
+	}
+    if (condition)
+    {
+      start = 0;
+      DHT_Read_Temperature_Humidity(&dht_0);
+      temp = dht_0.Temp;
+      humi = dht_0.Hum;
+      DELAY_Tim_Ms(&htim4, 500);
+    }
+    else
+    {
+      start = 1;
+    }
+      break;
+
+    default:
+      break;
+    }
+  }
+  else
+  {
     LCD_Set_Cursor(&lcd_0, 0, 0);
     LCD_Send_String(&lcd_0, "PLEASE CHOOSE MODE");
     LCD_Set_Cursor(&lcd_0, 0, 1);
@@ -112,58 +170,14 @@ void EFFECT_Handle()
     rate = (TIM3->CNT) >> 2;
     if (rate % 2)
     {
-      LCD_Send_String(&lcd_0, &data_sr04);
-      if (condition)
-      {
-        effect = SR_04;
-      }
+      LCD_Send_String(&lcd_0, "SR04 ");
+      effect = SR_04;
     }
     else
     {
-      LCD_Send_String(&lcd_0, &data_dht11);
-      if (condition)
-      {
-        effect = DHT11;
-      }
+      LCD_Send_String(&lcd_0, "DHT11");
+      effect = DHT11;
     }
-    break;
-
-  case SR_04:
-    if (start)
-    {
-      LCD_Set_Clear(&lcd_0);
-      LCD_Set_Cursor(&lcd_0, 0, 0);
-      LCD_Send_String(&lcd_0, "DISTANCE");
-    }
-    if (condition)
-    {
-      start = 0;
-      distance = GET_Distance(&htim4, GPIOA, GPIO_PIN_1, GPIOA, GPIO_PIN_0);
-      int8_t temp = 0;
-      for (int i = 0; i < 4; i++)
-      {
-        temp = distance % (10);
-        data_distance[4 - 1 - i] = temp + 48;
-        distance /= 10;
-      }
-      LCD_Set_Cursor(&lcd_0, 9, 0);
-      LCD_Send_String(&lcd_0, &data_distance);
-      DELAY_Tim_Ms(&htim4, 500);
-    }
-    else
-    {
-      effect = SELECT;
-      start = 1;
-    }
-
-    break;
-
-  case DHT11:
-
-    break;
-
-  default:
-    break;
   }
 }
 /* USER CODE END 0 */
@@ -204,6 +218,7 @@ int main(void)
   HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
   BUTTON_Init(&button_0, GPIOA, GPIO_PIN_2);
   LCD_I2C_Init(&lcd_0, &hi2c1, 20, 4, SLAVE_ADDRESS << 1);
+  DHT11_Init(&dht_0, &htim4, GPIOA, GPIO_PIN_3);
   /* USER CODE END 2 */
 
   /* Infinite loop */

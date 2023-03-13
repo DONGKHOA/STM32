@@ -2,12 +2,10 @@
 
 __weak void BUTTON_Pressing_Callback(BUTTON_HandleTypeDef *ButtonX)
 {
-
 }
 
 __weak void BUTTON_Releasing_Callback(BUTTON_HandleTypeDef *ButtonX)
 {
-
 }
 
 /**

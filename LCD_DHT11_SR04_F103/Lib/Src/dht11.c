@@ -11,10 +11,100 @@ static void DHT11_Delay_Us(DHT11_HandleTypeDef *DHT, uint16_t time_us)
     DELAY_Tim_Us(DHT->htim, time_us);
 }
 
+static void Set_Pin_Out(DHT11_HandleTypeDef *DHT)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = DHT->GPIO_Pin_DHT11;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT->GPIO_DHT11, &GPIO_InitStruct);
+}
+
+static void Set_Pin_In(DHT11_HandleTypeDef *DHT)
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = DHT->GPIO_Pin_DHT11;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(DHT->GPIO_DHT11, &GPIO_InitStruct);
+}
+
+static uint8_t DHT_ReadPin(DHT11_HandleTypeDef *DHT)
+{
+    uint8_t value;
+    value = HAL_GPIO_ReadPin(DHT->GPIO_DHT11, DHT->GPIO_Pin_DHT11);
+    return value;
+}
+
+static void DHT_WtritePin(DHT11_HandleTypeDef *DHT, uint8_t state)
+{
+    HAL_GPIO_WritePin(DHT->GPIO_DHT11, DHT->GPIO_Pin_DHT11, state);
+}
+
+static void DHT11_Start(DHT11_HandleTypeDef *DHT)
+{
+    Set_Pin_Out(DHT);                // set the pin output
+    DHT_WtritePin(DHT, 0);           // pull pin the low
+    DHT11_Delay_Us(DHT, DHT->start); // waiting for start time
+    Set_Pin_In(DHT);                 // set the pin input
+}
+
+static uint8_t DHT_Check_Response(DHT11_HandleTypeDef *DHT)
+{
+    uint8_t response = 0;
+    DHT11_Start(DHT);
+    DHT11_Delay_Us(DHT, 40); // waiting for 40 us
+    if (!DHT_ReadPin(DHT))
+    {
+        DHT11_Delay_Us(DHT, 80);
+        if (DHT_ReadPin(DHT))
+        {
+            response = 1;
+        }
+        else
+        {
+            response = 0;
+        }
+    }
+
+    while (DHT_ReadPin(DHT))
+    {
+    } // waiting for the pin to go low
+
+    return response;
+}
+
+static uint8_t DHT_Read(DHT11_HandleTypeDef *DHT)
+{
+    uint8_t value = 0;
+
+    Set_Pin_In(DHT); // set the pin input
+
+    for (int i = 0; i < 8; i++)
+    {
+        while (!DHT_ReadPin(DHT))
+            ; // waiting for the pin to go high
+
+        DHT11_Delay_Us(DHT, 40); // waiting for 40 us
+        if (!DHT_ReadPin(DHT))
+        {
+            value &= ~(1 << (7 - i)); // write 0
+        }
+        else
+        {
+            value |= 1 << (7 - i); // write 1
+        }
+        while (DHT_ReadPin(DHT))
+            ; // waiting for the pin to go low
+    }
+    return value;
+}
+
 /**
  * It initializes the DHT11_HandleTypeDef structure with the start time, GPIO port, GPIO pin, and timer
  * handle
- * 
+ *
  * @param DHT pointer to the DHT11_HandleTypeDef structure
  * @param htim TIM_HandleTypeDef *htim;
  * @param GPIO_DHT11 The GPIO port that the DHT11 is connected to.
@@ -29,7 +119,26 @@ void DHT11_Init(DHT11_HandleTypeDef *DHT, TIM_HandleTypeDef *htim, GPIO_TypeDef 
     DHT11_Delay_Init(DHT);
 }
 
-static uint8_t DHT11_Start(DHT11_HandleTypeDef *DHT)
+/**
+ * The function starts by sending a start signal to the DHT11 sensor. Then it reads the data from the
+ * sensor and stores it in the appropriate variables. Finally, it converts the data to the appropriate
+ * format and stores it in the appropriate variables
+ *
+ * @param DHT Pointer to the DHT11_HandleTypeDef structure that contains the configuration information
+ * for the DHT11.
+ */
+void DHT_Read_Temperature_Humidity(DHT11_HandleTypeDef *DHT)
 {
-    
+    uint8_t Temp1, Temp2, RH1, RH2;
+    uint16_t Temp, Humi, SUM = 0;
+    DHT11_Start(DHT);
+    RH1 = DHT_Read(DHT);   // Read natural part of humidity
+    RH2 = DHT_Read(DHT);   // Read decimal part of humidity
+    Temp1 = DHT_Read(DHT); // Read natural part of temperature
+    Temp2 = DHT_Read(DHT); // Read decimal part of temperature
+    SUM = DHT_Read(DHT);   // Read sum of the previous 4 bytes
+    Temp = (Temp1 << 8) | Temp2;
+    Humi = (RH1 << 8) | RH2;
+    DHT->Temp = (float)(Temp / 10.0);
+    DHT->Hum = (float)(Humi / 10.0);
 }
