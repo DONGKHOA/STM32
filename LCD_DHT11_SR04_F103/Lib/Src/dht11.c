@@ -138,8 +138,8 @@ void DHT_Read_Temperature_Humidity(DHT11_HandleTypeDef *DHT)
     temp1 = DHT_Read(DHT); // Read natural part of temperature
     temp2 = DHT_Read(DHT); // Read decimal part of temperature
     SUM = DHT_Read(DHT);   // Read sum of the previous 4 bytes
-    temp = (float) temp1 + (float) (temp2/ 10.0);
-    humi = (float) RH1 + (float) (RH2/ 10.0);
+    temp = (float)temp1 + (float)(temp2 / 10.0);
+    humi = (float)RH1 + (float)(RH2 / 10.0);
     DHT->Temp = temp;
     DHT->Hum = humi;
 }
