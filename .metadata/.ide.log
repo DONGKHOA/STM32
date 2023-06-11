@@ -1,0 +1,12 @@
+2023-06-11 13:44:29,322 [INFO] Activator:176 - 
+
+
+2023-06-11 13:44:29,336 [INFO] Activator:177 - !SESSION log4j initialized
+2023-06-11 13:44:41,547 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-06-11 13:45:07,396 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-06-11 13:45:07,396 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-06-11 13:45:07,398 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-06-11 13:55:35,328 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431
+2023-06-11 13:55:35,355 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\/mcu/
+2023-06-11 13:55:35,355 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\/plugins/boardmanager/
+2023-06-11 13:55:35,357 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\/plugins/mcufinder/images/
