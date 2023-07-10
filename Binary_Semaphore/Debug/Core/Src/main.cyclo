@@ -1,0 +1,10 @@
+main.c:80:5:BUTTON_Handle	5
+main.c:115:5:main	1
+main.c:200:6:SystemClock_Config	3
+main.c:240:13:MX_USART2_UART_Init	2
+main.c:273:13:MX_GPIO_Init	1
+main.c:315:6:StartNormalTask	1
+main.c:338:6:StartHighTask	1
+main.c:368:6:StartLowTask	1
+main.c:399:6:HAL_TIM_PeriodElapsedCallback	2
+main.c:416:6:Error_Handler	1

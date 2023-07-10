@@ -1,0 +1,132 @@
+22:06:50 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  15804	     28	   5740	  21572	   5444	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+22:06:54 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-size   Binary_Semaphore.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15804	     28	   5740	  21572	   5444	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+22:13:28 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  15804	     28	   5740	  21572	   5444	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+22:57:18 **** Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18244	     28	   5740	  24012	   5dcc	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:00:37 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18368	     28	   5740	  24136	   5e48	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:02:41 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18392	     28	   5740	  24160	   5e60	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:06:44 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18392	     28	   5740	  24160	   5e60	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:52:49 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18160	     24	   5728	  23912	   5d68	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:53:34 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-size   Binary_Semaphore.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18160	     24	   5728	  23912	   5d68	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+23:56:28 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-gcc -o "Binary_Semaphore.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\thanh\STM32CubeIDE\workspace_1.12.1\Binary_Semaphore\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Binary_Semaphore.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Binary_Semaphore.elf
+ 
+arm-none-eabi-size   Binary_Semaphore.elf 
+arm-none-eabi-objdump -h -S  Binary_Semaphore.elf  > "Binary_Semaphore.list"
+   text	   data	    bss	    dec	    hex	filename
+  18160	     24	   5728	  23912	   5d68	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
+Finished building: Binary_Semaphore.list
+ 
+23:58:04 **** Incremental Build of configuration Debug for project Binary_Semaphore ****
+make -j8 all 
+arm-none-eabi-size   Binary_Semaphore.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18160	     24	   5728	  23912	   5d68	Binary_Semaphore.elf
+Finished building: default.size.stdout
+ 
