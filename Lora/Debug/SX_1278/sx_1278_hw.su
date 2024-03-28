@@ -1,0 +1,4 @@
+../SX_1278/sx_1278_hw.c:19:6:SX_1278_HW_Init	16	static
+../SX_1278/sx_1278_hw.c:40:9:SX_1278_HW_Command	32	static
+../SX_1278/sx_1278_hw.c:73:6:SX_1278_HW_Set_NSS	16	static
+../SX_1278/sx_1278_hw.c:86:6:SX_1278_HW_Reset	16	static

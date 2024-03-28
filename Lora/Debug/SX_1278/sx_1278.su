@@ -1,0 +1,12 @@
+../SX_1278/sx_1278.c:22:13:SX_1278_SPIWrite	16	static
+../SX_1278/sx_1278.c:40:16:SX_1278_SPIRead	24	static
+../SX_1278/sx_1278.c:57:13:SX_1278_MODE_Lora	16	static
+../SX_1278/sx_1278.c:92:6:SX_1278_Init	24	static
+../SX_1278/sx_1278.c:115:6:SX_1278_Config	32	static
+../SX_1278/sx_1278.c:175:6:SX_1278_STANDBY	16	static
+../SX_1278/sx_1278.c:188:6:SX_1278_SLEEP	16	static
+../SX_1278/sx_1278.c:208:9:SX_1278_TX_Init	32	static
+../SX_1278/sx_1278.c:242:9:SX_1278_TX_Packet	24	static
+../SX_1278/sx_1278.c:262:9:SX_1278_RX_Init	32	static
+../SX_1278/sx_1278.c:296:9:SX_1278_RX_Packet	16	static
+../SX_1278/sx_1278.c:307:6:SX_1278_ClearIRQ	16	static
